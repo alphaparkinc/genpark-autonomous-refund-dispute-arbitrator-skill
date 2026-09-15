@@ -1,0 +1,38 @@
+{
+  "name": "genpark-autonomous-refund-dispute-arbitrator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Autonomous customer refund and chargeback dispute arbitration engine validating carrier proofs, return policy windows, and damage evidence.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "dispute-arbitration",
+  "tags": [
+    "refund-arbitration",
+    "dispute-resolution",
+    "chargeback-defense",
+    "ecommerce-policy",
+    "customer-support"
+  ],
+  "inputs": {
+    "order_id": {
+      "type": "string",
+      "default": "ord_88219"
+    },
+    "days_since_delivery": {
+      "type": "integer",
+      "default": 12
+    }
+  },
+  "outputs": {
+    "arbitration_id": {
+      "type": "string"
+    },
+    "eligibility_score": {
+      "type": "integer"
+    },
+    "arbitrated_verdict": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
